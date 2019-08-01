@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100&display=swap');
+
+.product-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 0 50px;
+}
+
+.product-image{
+  width: 250px !important;
+  height: 350px !important;
+}
+
+.product-name{
+    font-weight: 900;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}    
+
+.product-price{
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.product{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.1s ease-in;
+}
+
+.container {
+  padding: 0px !important;
+  margin: 0 0 0 2% !important;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-loading-container{
+  display: block;
+}
+
+.load-more-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.load-more-btn {
+  /* display: block; */
+  border-radius: 4px;
+  background-color: black !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.load-more-btn span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.load-more-btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.load-more-btn:hover span{
+  padding-right: 25px;
+}
+
+.load-more-btn:hover span:after{
+  opacity: 1;
+  right: 0;
+}
+
+#loading{
+  display: flex;
+  justify-content: center;
+}
+
+/* NAVIGATION BAR CSS */
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  box-shadow: 0px 0px 5px #aaaaaa;
+  max-height: 50px;
+}
+
+.topnav {
+  overflow: auto;
+  background-color: white;
+  top: 50px;
+  left: 0px;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  box-shadow: 0px 0px 2.5px #aaaaaa;
+  margin: 0px 0px 50px 0px;
+  max-height: 40%;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 3px;
+}
+
+.topnav a:hover {
+  color: #d62598;
+}
+
+.pb-img{
+  display: flex;
+  justify-content: center;
+}
+
+.hamberger-icon, #sideNav{
+  display: none;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+
+  .product-container{
+    padding: 0 0 0 8.9%;
+  }
+
+  .topnav a{
+    display: none;
+  }
+
+  .toolbar{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hamberger-icon{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .pb-img{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hamberger-icon, #sideNav{
+    display: block;
+  }
+
+  .hamberger-icon{
+    cursor: pointer;
+    font-size: 28px;
+    margin:  15px 0  0 5px;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 99999;
+    top: 0px;
+    left: -300px;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #d62598;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+ 
+}
+
+ 
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 16px;}
+}
